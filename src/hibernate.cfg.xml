@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<!-- 数据库连接信息 -->
+	<property name="connection.username">alan</property>
+	<property name="connection.password">root</property>
+	<property name="connection.url">
+		jdbc:oracle:thin:@127.0.0.1:1521:XE
+	</property>
+	<property name="connection.driver_class">
+		oracle.jdbc.driver.OracleDriver
+	</property>
+	
+	<!-- Hibernate属性 -->
+	<property name="show_sql">true</property>
+	<property name="format_sql">true</property>
+	<property name="dialect">
+		org.hibernate.dialect.Oracle9Dialect
+	</property>
+	
+	<!-- 映射文件 -->
+	<mapping resource="com/briup/pojo/User.hbm.xml"/>
+	
+</session-factory>
+</hibernate-configuration>
